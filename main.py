@@ -7,7 +7,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import NoTranscriptFound, TranscriptsDisabled, VideoUnavailable
 
 VIDEO_ID_RE = re.compile(
-    r"(?:v=|youtu\.be/|embed/|v/|watch\?v=|&v=)([A-Za-z0-9_-]{11})"
+    r"(?:v=|\/embed\/|\/v\/|youtu\.be\/|\/shorts\/)([a-zA-Z0-9_-]{11})"
 )
 
 def extract_video_id(url_or_id: str) -> str:
